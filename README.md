@@ -1,2 +1,2 @@
 # porto
-Thisi is my portofolio
+This is my portofolio

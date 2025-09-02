@@ -3,133 +3,513 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nara Studio — Under Construction</title>
-    <meta name="description" content="Nara Studio is currently under construction." />
+    <title>Nara Studio — Creative Digital Agency</title>
+    <meta name="description" content="Nara Studio - Modern creative digital agency specializing in innovative design and development solutions." />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
       :root {
-        --bg-start: #0f172a;
-        --bg-end: #0b1220;
-        --card: rgba(255, 255, 255, 0.06);
-        --border: rgba(255, 255, 255, 0.18);
-        --text: #e5e7eb;
-        --muted: #cbd5e1;
-        --accent-1: #f59e0b;
-        --accent-2: #f97316;
+        /* Color Palette */
+        --primary-dark: #0a0a0f;
+        --primary-medium: #1a1a2e;
+        --primary-light: #16213e;
+        --accent-primary: #f59e0b;
+        --accent-secondary: #f97316;
+        --accent-tertiary: #06b6d4;
+        --text-primary: #ffffff;
+        --text-secondary: #e5e7eb;
+        --text-muted: #9ca3af;
+        --glass: rgba(255, 255, 255, 0.08);
+        --glass-border: rgba(255, 255, 255, 0.16);
+        --shadow-primary: rgba(0, 0, 0, 0.5);
+        --shadow-accent: rgba(245, 158, 11, 0.3);
+        
+        /* Typography */
+        --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+        --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+        
+        /* Spacing */
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 1.5rem;
+        --space-lg: 2rem;
+        --space-xl: 3rem;
+        --space-2xl: 4rem;
+        
+        /* Breakpoints */
+        --bp-sm: 640px;
+        --bp-md: 768px;
+        --bp-lg: 1024px;
+        --bp-xl: 1280px;
       }
 
-      * { box-sizing: border-box; }
+      /* Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
 
       body {
-        margin: 0;
-        min-height: 100svh;
-        display: grid;
-        place-items: center;
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(1200px 800px at 12% 10%, #1f2937 0%, transparent 60%),
-          radial-gradient(1000px 700px at 88% 90%, #0b3b4a 0%, transparent 60%),
-          linear-gradient(180deg, var(--bg-start), var(--bg-end));
+        font-family: var(--font-primary);
+        background: 
+          radial-gradient(circle at 20% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
+          radial-gradient(circle at 40% 40%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
+          linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 50%, var(--primary-light) 100%);
+        min-height: 100vh;
+        color: var(--text-primary);
+        overflow-x: hidden;
+        position: relative;
       }
 
-      main {
+      /* Animated Background Elements */
+      .bg-decoration {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      .floating-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .shape {
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+        opacity: 0.1;
+        animation: float-random 8s infinite ease-in-out;
+      }
+
+      .shape:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+        animation-duration: 12s;
+      }
+
+      .shape:nth-child(2) {
+        width: 150px;
+        height: 150px;
+        top: 70%;
+        right: 10%;
+        animation-delay: -4s;
+        animation-duration: 10s;
+      }
+
+      .shape:nth-child(3) {
+        width: 100px;
+        height: 100px;
+        top: 40%;
+        right: 30%;
+        animation-delay: -8s;
+        animation-duration: 14s;
+      }
+
+      .shape:nth-child(4) {
+        width: 80px;
+        height: 80px;
+        bottom: 20%;
+        left: 20%;
+        animation-delay: -2s;
+        animation-duration: 9s;
+        background: linear-gradient(45deg, var(--accent-tertiary), var(--accent-primary));
+      }
+
+      /* Grid Lines */
+      .grid-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: grid-move 20s linear infinite;
+      }
+
+      /* Main Container */
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: var(--space-md);
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        padding: clamp(1.5rem, 3vw, 3rem);
-        border-radius: 20px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
-        border: 1px solid var(--border);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-        max-width: 720px;
-        width: min(92vw, 720px);
+        position: relative;
+        padding: var(--space-2xl) 0;
       }
 
-      .brand {
+      .hero-content {
+        max-width: 800px;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Brand Logo */
+      .brand-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+        padding: var(--space-sm) var(--space-lg);
+        background: var(--glass);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        animation: slide-down 1s ease-out;
+      }
+
+      .brand-logo:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px var(--shadow-accent);
+        border-color: var(--accent-primary);
+      }
+
+      .logo-icon {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .brand-text {
+        font-family: var(--font-display);
         font-weight: 700;
-        letter-spacing: 0.18em;
+        font-size: 1.1rem;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        font-size: 0.9rem;
-        margin-bottom: 0.75rem;
-        background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+        background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
         -webkit-background-clip: text;
         background-clip: text;
-        color: transparent;
-        filter: drop-shadow(0 2px 6px rgba(249, 115, 22, 0.25));
+        -webkit-text-fill-color: transparent;
       }
 
-      .icon-wrap {
-        width: 96px;
-        height: 96px;
-        margin: 0 auto 1rem;
-        display: grid;
-        place-items: center;
+      /* Main Title */
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.5rem, 8vw, 6rem);
+        font-weight: 800;
+        line-height: 0.9;
+        margin-bottom: var(--space-md);
+        background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: slide-up 1s ease-out 0.3s both;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        font-weight: 300;
+        color: var(--text-secondary);
+        margin-bottom: var(--space-lg);
+        animation: slide-up 1s ease-out 0.6s both;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin-bottom: var(--space-xl);
+        animation: slide-up 1s ease-out 0.9s both;
+      }
+
+      /* Status Card */
+      .status-card {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-sm);
+        padding: var(--space-md) var(--space-lg);
+        background: var(--glass);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        border-radius: 20px;
+        margin-bottom: var(--space-xl);
+        transition: all 0.3s ease;
+        animation: slide-up 1s ease-out 1.2s both;
+      }
+
+      .status-indicator {
+        width: 12px;
+        height: 12px;
+        background: var(--accent-primary);
         border-radius: 50%;
-        background:
-          radial-gradient(60% 60% at 30% 30%, rgba(255,255,255,0.28), rgba(255,255,255,0) 60%),
-          linear-gradient(135deg, var(--accent-1), var(--accent-2));
-        box-shadow: 0 10px 24px rgba(249, 115, 22, 0.35), inset 0 -2px 8px rgba(0,0,0,0.2);
-        animation: float 3.2s ease-in-out infinite;
+        animation: pulse 2s infinite;
       }
 
-      h1 {
-        margin: 0.25rem 0 0.25rem;
-        font-size: clamp(1.8rem, 1.2rem + 2.2vw, 2.8rem);
-        letter-spacing: 0.3px;
+      .status-text {
+        font-weight: 500;
+        color: var(--text-secondary);
       }
 
-      p {
-        margin: 0.25rem 0 0;
-        color: var(--muted);
-        font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.05rem);
+      /* Action Buttons */
+      .hero-actions {
+        display: flex;
+        gap: var(--space-md);
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: slide-up 1s ease-out 1.5s both;
       }
 
-      .divider {
-        height: 1px;
-        width: 100%;
-        margin: 1.25rem 0 0.75rem;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      .btn {
+        padding: var(--space-md) var(--space-xl);
+        border: none;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
       }
 
-      .stripes {
-        width: 100%;
-        height: 10px;
-        border-radius: 999px;
-        background: repeating-linear-gradient(135deg,
-          rgba(0,0,0,0.15) 0 16px,
-          rgba(255,255,255,0.28) 16px 32px);
-        opacity: 0.35;
+      .btn-primary {
+        background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+        color: white;
+        box-shadow: 0 8px 25px var(--shadow-accent);
       }
 
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-6px); }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 35px var(--shadow-accent);
       }
 
-      /* Respect reduced motion */
+      .btn-secondary {
+        background: var(--glass);
+        color: var(--text-primary);
+        border: 1px solid var(--glass-border);
+        backdrop-filter: blur(20px);
+      }
+
+      .btn-secondary:hover {
+        transform: translateY(-2px);
+        border-color: var(--accent-primary);
+        box-shadow: 0 10px 30px var(--shadow-primary);
+      }
+
+      /* Social Links */
+      .social-links {
+        display: flex;
+        gap: var(--space-md);
+        justify-content: center;
+        margin-top: var(--space-xl);
+        animation: fade-in 1s ease-out 1.8s both;
+      }
+
+      .social-link {
+        width: 50px;
+        height: 50px;
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(20px);
+      }
+
+      .social-link:hover {
+        transform: translateY(-3px);
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+        box-shadow: 0 10px 25px var(--shadow-accent);
+      }
+
+      /* Animations */
+      @keyframes float-random {
+        0%, 100% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(20px, -30px) rotate(90deg);
+        }
+        50% {
+          transform: translate(-10px, 20px) rotate(180deg);
+        }
+        75% {
+          transform: translate(-30px, -10px) rotate(270deg);
+        }
+      }
+
+      @keyframes grid-move {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(50px, 50px);
+        }
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: scale(1.1);
+        }
+      }
+
+      @keyframes slide-down {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slide-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero-actions {
+          justify-content: center;
+        }
+        
+        .btn {
+          width: auto;
+          min-width: 200px;
+          justify-content: center;
+        }
+        
+        .social-links {
+          gap: var(--space-sm);
+        }
+      }
+
+      /* Reduced motion */
       @media (prefers-reduced-motion: reduce) {
-        .icon-wrap { animation: none; }
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
       }
     </style>
   </head>
   <body>
-    <main aria-label="Under construction">
-      <div class="brand" aria-label="Site name">Nara Studio</div>
-      <div class="icon-wrap" aria-hidden="true">
-        <!-- Inline construction barrier icon -->
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Construction icon">
-          <g stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="7" width="18" height="6" rx="1.5" fill="none"/>
-            <path d="M6 7l3 6M10 7l3 6M14 7l3 6" />
-            <path d="M6 13v4M18 13v4" />
-            <path d="M5 20h3M16 20h3" />
-          </g>
-        </svg>
+    <!-- Animated Background -->
+    <div class="bg-decoration">
+      <div class="grid-overlay"></div>
+      <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
       </div>
-      <h1>Under Construction</h1>
-      <div class="divider" aria-hidden="true"></div>
-      <p>We’re working to bring this page to life. Please check back soon.</p>
-      <div class="stripes" aria-hidden="true" style="margin-top:1rem"></div>
-    </main>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <section class="hero">
+        <div class="hero-content">
+          <!-- Brand Logo -->
+          <div class="brand-logo">
+            <div class="logo-icon">N</div>
+            <span class="brand-text">Nara Studio</span>
+          </div>
+
+          <!-- Main Content -->
+          <h1 class="hero-title">
+            Creative<br>
+            Digital<br>
+            <span style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Agency</span>
+          </h1>
+
+          <h2 class="hero-subtitle">Under Construction</h2>
+
+          <p class="hero-description">
+            We're crafting something extraordinary. Our team is working around the clock to deliver innovative design solutions that will transform your digital presence.
+          </p>
+
+          <!-- Status Indicator -->
+          <div class="status-card">
+            <div class="status-indicator"></div>
+            <span class="status-text">Currently in development</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="mailto:denaachmad@narastudio.site" class="btn btn-primary">
+              <i class="fas fa-envelope"></i>
+              Contact Us
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Dribbble">
+              <i class="fab fa-dribbble"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
-  </html>
+</html>

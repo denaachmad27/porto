@@ -8,20 +8,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
       :root {
-        /* Color Palette */
+        /* Color Palette - Updated with Blue Primary */
         --primary-dark: #0a0a0f;
         --primary-medium: #1a1a2e;
         --primary-light: #16213e;
-        --accent-primary: #f59e0b;
-        --accent-secondary: #f97316;
-        --accent-tertiary: #06b6d4;
+        --accent-primary: #2563eb; /* Blue primary color from logo */
+        --accent-secondary: #3b82f6; /* Lighter blue */
+        --accent-tertiary: #06b6d4; /* Cyan accent */
         --text-primary: #ffffff;
         --text-secondary: #e5e7eb;
         --text-muted: #9ca3af;
         --glass: rgba(255, 255, 255, 0.08);
         --glass-border: rgba(255, 255, 255, 0.16);
         --shadow-primary: rgba(0, 0, 0, 0.5);
-        --shadow-accent: rgba(245, 158, 11, 0.3);
+        --shadow-accent: rgba(37, 99, 235, 0.3); /* Blue shadow */
         
         /* Typography */
         --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
@@ -56,9 +56,9 @@
       body {
         font-family: var(--font-primary);
         background: 
-          radial-gradient(circle at 20% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
-          radial-gradient(circle at 40% 40%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+          radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
           linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 50%, var(--primary-light) 100%);
         min-height: 100vh;
         color: var(--text-primary);
@@ -190,14 +190,23 @@
       .logo-icon {
         width: 32px;
         height: 32px;
-        background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-        border-radius: 8px;
+        background: var(--accent-primary);
+        border-radius: 6px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Nara Studio Logo SVG */
+      .logo-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
       }
 
       .brand-text {
@@ -462,7 +471,22 @@
         <div class="hero-content">
           <!-- Brand Logo -->
           <div class="brand-logo">
-            <div class="logo-icon">N</div>
+            <div class="logo-icon">
+              <!-- Nara Studio Logo SVG -->
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer rounded rectangle -->
+                <rect x="10" y="10" width="80" height="80" rx="20" ry="20" fill="none" stroke="white" stroke-width="8"/>
+                <!-- Vertical dividers -->
+                <line x1="40" y1="10" x2="40" y2="90" stroke="white" stroke-width="8"/>
+                <line x1="60" y1="10" x2="60" y2="90" stroke="white" stroke-width="8"/>
+                <!-- Horizontal divider -->
+                <line x1="10" y1="50" x2="90" y2="50" stroke="white" stroke-width="8"/>
+                <!-- Bottom left curved corner -->
+                <path d="M 10 70 Q 10 90 30 90 L 40 90" fill="none" stroke="white" stroke-width="8"/>
+                <!-- Bottom right section -->
+                <rect x="60" y="50" width="30" height="32" fill="none" stroke="white" stroke-width="4"/>
+              </svg>
+            </div>
             <span class="brand-text">Nara Studio</span>
           </div>
 

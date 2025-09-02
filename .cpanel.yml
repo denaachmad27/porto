@@ -1,0 +1,5 @@
+    ---
+    deployment:
+      tasks:
+        - export DEPLOYPATH=/home/wwwnaras1/porto
+        - /bin/cp -r * $DEPLOYPATH

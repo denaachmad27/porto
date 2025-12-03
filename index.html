@@ -1,711 +1,489 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nara Studio — Creative Digital Agency</title>
-    <meta name="description" content="Nara Studio — Modern creative digital agency specializing in innovative design and development solutions." />
-    <!-- Open Graph / Twitter -->
-    <meta property="og:title" content="Nara Studio — Creative Digital Agency" />
-    <meta property="og:description" content="AI-driven design & development. Faster delivery, lower cost, higher impact." />
-    <meta property="og:image" content="images/narastudio.png" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#0a0a0f" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="images/narastudio.png">
-  </head>
-  <body>
-    <!-- Skip Link for Accessibility -->
-    <a class="skip-link" href="#home">Skip to content</a>
+<html lang="id">
 
-    <!-- Animated Background -->
-    <div class="bg-decoration" aria-hidden="true">
-      <div class="grid-overlay"></div>
-      <div class="gradient-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nara Studio — Partner Digital Sahabat UMKM</title>
+  <meta name="description"
+    content="Nara Studio membantu UMKM Indonesia 'Go Digital' dengan mudah dan terjangkau. Solusi website & aplikasi hemat biaya berkat teknologi AI, tanpa mengurangi kualitas." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Nara Studio — Partner Digital Sahabat UMKM" />
+  <meta property="og:description"
+    content="Bikin bisnis UMKM makin maju dengan teknologi canggih yang ramah di kantong. Kami bantu Anda 'Go Online' tanpa ribet." />
+  <meta property="og:image" content="images/narastudio.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#FBBF24" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/narastudio.png">
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+  <!-- Skip Link -->
+  <a class="skip-link" href="#home">Langsung ke konten utama</a>
+
+  <!-- Navbar -->
+  <header class="navbar" role="banner">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <div class="nav-logo">
+          <img src="images/narastudio.png" alt="Logo Nara Studio" />
+        </div>
+        <span class="nav-brand-text">Nara Studio</span>
+      </a>
+      <nav class="nav-menu" role="navigation" aria-label="Utama">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-items" aria-label="Buka menu navigasi">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+        <ul id="nav-items" class="nav-items">
+          <li><a class="nav-link" href="#home">Beranda</a></li>
+          <li><a class="nav-link" href="#about">Kenapa Kami?</a></li>
+          <li><a class="nav-link" href="#services">Layanan</a></li>
+          <li><a class="nav-link" href="#work">Hasil Karya</a></li>
+          <li><a class="nav-link btn-nav" href="#contact">Yuk Ngobrol!</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div id="hero-canvas"></div> <!-- Container for Three.js -->
+      <div class="container hero-container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              <span>Sahabat Terbaik UMKM Indonesia</span>
+            </div>
+
+            <h1 class="hero-title">
+              Teknologi Canggih,<br>
+              <span class="highlight">Harga Tetap Manis.</span>
+            </h1>
+
+            <p class="hero-description">
+              Kami percaya setiap usaha berhak untuk maju. Nara Studio hadir membantu UMKM Anda "Go Digital" dengan
+              solusi yang mudah dimengerti, cepat, dan pastinya ramah di kantong berkat bantuan teknologi pintar (AI).
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">
+                <span>Konsultasi Gratis</span>
+                <i class="fas fa-comment-dots"></i>
+              </a>
+              <a href="#work" class="btn btn-outline">
+                <span>Lihat Contoh</span>
+              </a>
+            </div>
+
+            <div class="hero-trust">
+              <p>Dipercaya oleh pelaku usaha dari berbagai bidang:</p>
+              <div class="trust-icons">
+                <span title="Kuliner"><i class="fas fa-utensils"></i></span>
+                <span title="Fashion"><i class="fas fa-tshirt"></i></span>
+                <span title="Jasa"><i class="fas fa-tools"></i></span>
+                <span title="Retail"><i class="fas fa-store"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <!-- Placeholder for generated image -->
+            <div class="image-wrapper floating">
+              <img src="images/hero_illustration_umkm.png" onerror="this.src='images/laptop_icon.png'"
+                alt="Ilustrasi Kolaborasi Digital" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual">
+            <div class="image-wrapper">
+              <img src="images/about_illustration_growth.png" onerror="this.src='images/light_icon.png'"
+                alt="Tumbuh Bersama Teknologi" />
+            </div>
+          </div>
+          <div class="about-content">
+            <span class="section-tag">Tentang Kami</span>
+            <h2 class="section-title">Kami Mengerti Perjuangan Anda</h2>
+            <p class="section-text">
+              Seringkali teknologi terasa rumit, mahal, dan "bukan untuk orang kecil". Kami ingin mengubah pandangan
+              itu.
+            </p>
+            <p class="section-text">
+              Di Nara Studio, kami menggabungkan sentuhan manusia dengan kecerdasan buatan (AI). Hasilnya? Pekerjaan
+              jadi lebih cepat selesai, biaya produksi turun drastis, tapi kualitas tetap nomor satu. Ini adalah cara
+              kami mendukung UMKM agar bisa bersaing di era digital.
+            </p>
+
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                <div>
+                  <h4>Pendekatan Personal</h4>
+                  <p>Kami dengarkan cerita Anda, bukan sekadar jualan sistem.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                <div>
+                  <h4>Cepat & Efisien</h4>
+                  <p>Tak perlu menunggu berbulan-bulan untuk punya website sendiri.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-wallet"></i></div>
+                <div>
+                  <h4>Harga Saudara</h4>
+                  <p>Kualitas agensi besar dengan harga yang masuk akal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Layanan Kami</span>
+          <h2 class="section-title">Apa yang Bisa Kami Bantu?</h2>
+          <p class="section-description">
+            Pilih solusi yang paling pas buat usaha Anda saat ini. Bingung? Tanya saja dulu, gratis kok!
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class="fas fa-store"></i>
+            </div>
+            <h3>Bikin Website Jualan</h3>
+            <p>Toko online yang buka 24 jam. Terima pesanan otomatis, tampilannya rapi, dan mudah ditemukan di Google.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i> Desain Cantik & Modern</li>
+              <li><i class="fas fa-check-circle"></i> Bisa Buka di HP</li>
+              <li><i class="fas fa-check-circle"></i> Tombol WhatsApp Order</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>Desain Tampilan (UI/UX)</h3>
+            <p>Punya ide aplikasi tapi bingung gambarnya? Kami buatkan desain yang enak dilihat dan mudah dipakai
+              pelanggan.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i> Riset Pengguna</li>
+              <li><i class="fas fa-check-circle"></i> Tampilan Prototipe</li>
+              <li><i class="fas fa-check-circle"></i> Aset Grafis Lengkap</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Asisten Digital (AI)</h3>
+            <p>Bikin pekerjaan rutin jadi otomatis. Mulai dari balas chat pelanggan sampai rekap data, biarkan sistem
+              yang kerja.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i> Chatbot Pintar</li>
+              <li><i class="fas fa-check-circle"></i> Otomatisasi Admin</li>
+              <li><i class="fas fa-check-circle"></i> Analisa Data Sederhana</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="section section-work">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Portofolio</span>
+          <h2 class="section-title">Cerita Sukses Teman UMKM</h2>
+          <p class="section-description">Mereka sudah membuktikan, sekarang giliran Anda.</p>
+        </div>
+
+        <div class="work-slider">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-image">
+              <img src="images/batik_nusantara_portfolio.png" alt="Batik Nusantara Website" />
+              <div class="project-overlay">
+                <span class="project-cat">Website Toko Online</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Batik Nusantara</h3>
+              <p>"Sejak punya web sendiri, pesanan dari luar kota jadi makin banyak. Gak ribet lagi kirim foto satu-satu
+                di WA."</p>
+              <div class="project-stats">
+                <div>
+                  <strong>200%</strong>
+                  <span>Kenaikan Omset</span>
+                </div>
+                <div>
+                  <strong>24/7</strong>
+                  <span>Toko Buka</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-image">
+              <img src="images/kopi_senja_portfolio.png" alt="Kopi Senja App" />
+              <div class="project-overlay">
+                <span class="project-cat">Aplikasi Mobile</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Kopi Senja</h3>
+              <p>"Pelanggan suka banget scan QR menu digitalnya. Pesan jadi cepat, antrian kasir jadi lebih lega."</p>
+              <div class="project-stats">
+                <div>
+                  <strong>3x</strong>
+                  <span>Lebih Cepat</span>
+                </div>
+                <div>
+                  <strong>Hemat</strong>
+                  <span>Kertas Menu</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-image">
+              <img src="images/dapur_mama_portfolio.png" alt="Dapur Mama App" />
+              <div class="project-overlay">
+                <span class="project-cat">Aplikasi Katering</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Dapur Mama</h3>
+              <p>"Ibu-ibu komplek jadi gampang pesan katering harian. Saya gak pusing lagi rekap pesanan lewat chat."
+              </p>
+              <div class="project-stats">
+                <div>
+                  <strong>500+</strong>
+                  <span>Pelanggan</span>
+                </div>
+                <div>
+                  <strong>Auto</strong>
+                  <span>Rekap Order</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-visual">
+            <h3>Siap Naik Kelas?</h3>
+            <p>Jangan ragu buat sekadar tanya-tanya. Kami senang ngobrol dan berbagi ide.</p>
+            <div class="contact-methods">
+              <div class="method">
+                <i class="fas fa-envelope"></i>
+                <span>support@narastudio.site</span>
+              </div>
+              <div class="method">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Indonesia (Remote Friendly)</span>
+              </div>
+            </div>
+            <div class="socials">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <form class="contact-form" action="https://formsubmit.co/support@narastudio.site" method="POST">
+            <input type="hidden" name="_subject" value="Halo Nara Studio!" />
+            <input type="hidden" name="_next" value="" id="form-next" />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <div class="form-header">
+              <h4>Kirim Pesan</h4>
+            </div>
+
+            <div class="input-group">
+              <label>Nama Anda</label>
+              <input type="text" name="name" placeholder="Misal: Budi (Toko Kue)" required>
+            </div>
+
+            <div class="input-group">
+              <label>Email / WhatsApp</label>
+              <input type="text" name="contact" placeholder="Agar kami bisa membalas..." required>
+            </div>
+
+            <div class="input-group">
+              <label>Cerita Singkat</label>
+              <textarea name="message" rows="4" placeholder="Apa yang bisa kami bantu?"></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">
+                Kirim Sekarang <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Compact) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/narastudio.png" alt="Nara Studio" class="footer-logo">
+          <p>&copy; <span id="year"></span> Nara Studio. Mitra Digital UMKM.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Beranda</a>
+          <a href="#about">Tentang</a>
+          <a href="#services">Layanan</a>
+          <a href="#work">Portofolio</a>
+          <a href="#contact">Kontak</a>
+        </div>
       </div>
     </div>
+  </footer>
 
-    <!-- Navbar -->
-    <header class="navbar" role="banner">
-      <div class="nav-container">
-        <a href="#home" class="nav-brand">
-          <div class="nav-logo">
-            <img src="images/narastudio.png" alt="Nara Studio" />
-          </div>
-          <span class="nav-brand-text">Nara Studio</span>
-        </a>
-        <nav class="nav-menu" role="navigation" aria-label="Primary">
-          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-items" aria-label="Toggle navigation">
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-          </button>
-          <ul id="nav-items" class="nav-items">
-            <li><a class="nav-link" href="#home">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#services">Services</a></li>
-            <li><a class="nav-link" href="#work">Work</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-          <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-            <i class="fas fa-moon theme-icon"></i>
-          </button>
-        </nav>
-      </div>
-    </header>
+  <!-- Scripts -->
+  <script>
+    // Update Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section class="hero" id="home">
-        <div class="container hero-container">
-          <div class="hero-grid">
-            <div class="hero-content">
-              <div class="hero-badge">
-                <span class="badge-dot"></span>
-                <span>Available for projects</span>
-              </div>
+    // Form Redirect
+    document.getElementById('form-next').value = window.location.href;
 
-              <h1 class="hero-title">
-                <span class="hero-title-top">Transform Ideas Into</span>
-                <span class="hero-title-main">Digital Reality</span>
-              </h1>
+    // Mobile Menu
+    const navToggle = document.querySelector('.nav-toggle');
+    const navItems = document.getElementById('nav-items');
 
-              <p class="hero-description">
-                We craft exceptional digital experiences powered by AI. From concept to launch,
-                we deliver innovative solutions that drive results — 3x faster, at half the cost.
-              </p>
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navItems.classList.toggle('open');
+      navToggle.classList.toggle('active');
+    });
 
-              <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">
-                  <span>Start a Project</span>
-                  <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#work" class="btn btn-secondary">
-                  <span>View Our Work</span>
-                </a>
-              </div>
+    // Close menu when clicking link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navItems.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.classList.remove('active');
+      });
+    });
 
-              <div class="hero-stats">
-                <div class="stat-card">
-                  <span class="stat-icon"><i class="fas fa-gauge-high"></i></span>
-                  <div class="stat-content">
-                    <span class="stat-number">3x</span>
-                    <span class="stat-label">Faster Delivery</span>
-                  </div>
-                </div>
-                <div class="stat-card">
-                  <span class="stat-icon"><i class="fas fa-piggy-bank"></i></span>
-                  <div class="stat-content">
-                    <span class="stat-number">50%</span>
-                    <span class="stat-label">Cost Reduction</span>
-                  </div>
-                </div>
-                <div class="stat-card">
-                  <span class="stat-icon"><i class="fas fa-lightbulb"></i></span>
-                  <div class="stat-content">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Innovation</span>
-                  </div>
-                </div>
-              </div>
+    // Three.js Animation (Subtle Particles)
+    const initThreeJS = () => {
+      const container = document.getElementById('hero-canvas');
+      if (!container) return;
 
-              <div class="hero-brands">
-                <span class="brands-label">Trusted for</span>
-                <div class="brands-list">
-                  <div class="brand-item">
-                    <i class="fas fa-bolt"></i>
-                    <span>AI Technology</span>
-                  </div>
-                  <div class="brand-item">
-                    <i class="fas fa-globe"></i>
-                    <span>Global Teams</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 
-            <div class="hero-visual" aria-hidden="true">
-              <div class="visual-frame">
-                <div class="visual-header">
-                  <span class="visual-pill">Sprint 08</span>
-                  <div class="visual-signal">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-                <div class="visual-body">
-                  <div class="visual-row">
-                    <div class="visual-avatar">
-                      <i class="fas fa-robot"></i>
-                    </div>
-                    <div>
-                      <p class="visual-title">AI workflow</p>
-                      <p class="visual-subtitle">Concept to launch in 10 days</p>
-                    </div>
-                  </div>
-                  <div class="visual-progress">
-                    <span class="visual-progress-label">Design System</span>
-                    <div class="progress-bar">
-                      <span class="progress-value" style="--progress: 92%;"></span>
-                    </div>
-                  </div>
-                  <div class="visual-progress">
-                    <span class="visual-progress-label">Engineering</span>
-                    <div class="progress-bar">
-                      <span class="progress-value" style="--progress: 78%;"></span>
-                    </div>
-                  </div>
-                  <div class="visual-progress">
-                    <span class="visual-progress-label">Automation</span>
-                    <div class="progress-bar">
-                      <span class="progress-value" style="--progress: 95%;"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      container.appendChild(renderer.domElement);
 
-              <div class="hero-float hero-float-top">
-                <i class="fas fa-wand-magic-sparkles"></i>
-                <span>Concept Workshop</span>
-              </div>
-              <div class="hero-float hero-float-right">
-                <i class="fas fa-seedling"></i>
-                <span>Growth Strategy</span>
-              </div>
-              <div class="hero-float hero-float-bottom">
-                <i class="fas fa-chart-line"></i>
-                <span>Metrics Dashboard</span>
-              </div>
-              <div class="hero-rings">
-                <span class="ring ring-1"></span>
-                <span class="ring ring-2"></span>
-                <span class="ring ring-3"></span>
-              </div>
-            </div>
-          </div>
-        </div>
+      // Particles
+      const geometry = new THREE.BufferGeometry();
+      const count = 50;
+      const positions = new Float32Array(count * 3);
 
-        <div class="scroll-indicator">
-          <div class="scroll-line"></div>
-          <span class="scroll-text">Scroll to explore</span>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="section section-about">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">Who We Are</span>
-            <h2 class="section-title">Expertise Meets Innovation</h2>
-            <p class="section-description">
-              We're a digital agency that combines strategy, design, and engineering
-              with cutting-edge AI to deliver measurable results.
-            </p>
-          </div>
-
-          <div class="about-content">
-            <div class="about-grid">
-              <div class="about-card">
-                <div class="card-icon">
-                  <i class="fas fa-lightbulb"></i>
-                </div>
-                <h3 class="card-title">Strategic Thinking</h3>
-                <p class="card-text">
-                  We start with your business goals and craft solutions that deliver real impact,
-                  not just beautiful designs.
-                </p>
-              </div>
-
-              <div class="about-card">
-                <div class="card-icon">
-                  <i class="fas fa-rocket"></i>
-                </div>
-                <h3 class="card-title">Rapid Execution</h3>
-                <p class="card-text">
-                  AI-powered workflows accelerate development without compromising quality,
-                  getting you to market faster.
-                </p>
-              </div>
-
-              <div class="about-card">
-                <div class="card-icon">
-                  <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 class="card-title">Data-Driven Results</h3>
-                <p class="card-text">
-                  Every decision is backed by analytics and testing to ensure your investment
-                  delivers maximum ROI.
-                </p>
-              </div>
-
-              <div class="about-card">
-                <div class="card-icon">
-                  <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3 class="card-title">Quality Assurance</h3>
-                <p class="card-text">
-                  Rigorous testing and quality checks ensure pixel-perfect, bug-free experiences
-                  across all devices.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section id="services" class="section section-services">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">What We Do</span>
-            <h2 class="section-title">Services That Scale</h2>
-            <p class="section-description">
-              End-to-end solutions designed to accelerate your digital transformation
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-number">01</div>
-              <div class="service-icon">
-                <i class="fas fa-laptop-code"></i>
-              </div>
-              <h3 class="service-title">Web Development</h3>
-              <p class="service-description">
-                Lightning-fast websites and web apps built with modern frameworks.
-                Optimized for performance, SEO, and conversions.
-              </p>
-              <ul class="service-features">
-                <li><i class="fas fa-check"></i> Responsive Design</li>
-                <li><i class="fas fa-check"></i> SEO Optimization</li>
-                <li><i class="fas fa-check"></i> Performance Tuning</li>
-              </ul>
-            </div>
-
-            <div class="service-card">
-              <div class="service-number">02</div>
-              <div class="service-icon">
-                <i class="fas fa-mobile-screen-button"></i>
-              </div>
-              <h3 class="service-title">UI/UX Design</h3>
-              <p class="service-description">
-                User-centered design that delights and converts. From wireframes
-                to high-fidelity prototypes and design systems.
-              </p>
-              <ul class="service-features">
-                <li><i class="fas fa-check"></i> User Research</li>
-                <li><i class="fas fa-check"></i> Prototyping</li>
-                <li><i class="fas fa-check"></i> Design Systems</li>
-              </ul>
-            </div>
-
-            <div class="service-card">
-              <div class="service-number">03</div>
-              <div class="service-icon">
-                <i class="fas fa-brain"></i>
-              </div>
-              <h3 class="service-title">AI Integration</h3>
-              <p class="service-description">
-                Harness the power of AI to automate workflows, enhance user experiences,
-                and gain competitive advantages.
-              </p>
-              <ul class="service-features">
-                <li><i class="fas fa-check"></i> Automation</li>
-                <li><i class="fas fa-check"></i> API Integration</li>
-                <li><i class="fas fa-check"></i> AI Solutions</li>
-              </ul>
-            </div>
-
-            <div class="service-card">
-              <div class="service-number">04</div>
-              <div class="service-icon">
-                <i class="fas fa-server"></i>
-              </div>
-              <h3 class="service-title">Full-Stack Solutions</h3>
-              <p class="service-description">
-                Complete product development from MVP to production. Modern tech stack,
-                scalable architecture, robust security.
-              </p>
-              <ul class="service-features">
-                <li><i class="fas fa-check"></i> Backend Development</li>
-                <li><i class="fas fa-check"></i> Database Design</li>
-                <li><i class="fas fa-check"></i> Cloud Deployment</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Portfolio Section -->
-      <section id="work" class="section section-work">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">Our Work</span>
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-description">
-              A selection of projects that showcase our capabilities
-            </p>
-          </div>
-
-          <div class="work-grid">
-            <article class="work-card work-card-featured">
-              <div class="work-image">
-                <img src="images/laptop_icon.png" alt="AI-Powered Platform" />
-                <div class="work-overlay">
-                  <span class="work-category">Web Development</span>
-                </div>
-              </div>
-              <div class="work-content">
-                <h3 class="work-title">AI-Powered Platform</h3>
-                <p class="work-description">
-                  Complete redesign and development of an AI-driven SaaS platform,
-                  resulting in 200% increase in user engagement.
-                </p>
-                <div class="work-tags">
-                  <span class="tag">React</span>
-                  <span class="tag">Node.js</span>
-                  <span class="tag">AI/ML</span>
-                  <span class="tag">Cloud</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="work-card">
-              <div class="work-image">
-                <div class="work-placeholder">
-                  <img src="images/light_icon.png" alt="AI-Powered Platform" />
-                </div>
-                <div class="work-overlay">
-                  <span class="work-category">UI/UX Design</span>
-                </div>
-              </div>
-              <div class="work-content">
-                <h3 class="work-title">E-Commerce Redesign</h3>
-                <p class="work-description">
-                  Modern, conversion-focused design system that increased sales by 150%.
-                </p>
-                <div class="work-tags">
-                  <span class="tag">Figma</span>
-                  <span class="tag">Design System</span>
-                  <span class="tag">UX Research</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="work-card">
-              <div class="work-image">
-                <div class="work-placeholder">
-                  <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="work-overlay">
-                  <span class="work-category">Mobile App</span>
-                </div>
-              </div>
-              <div class="work-content">
-                <h3 class="work-title">Fitness Tracking App</h3>
-                <p class="work-description">
-                  iOS and Android app with AI-powered workout recommendations.
-                </p>
-                <div class="work-tags">
-                  <span class="tag">React Native</span>
-                  <span class="tag">Firebase</span>
-                  <span class="tag">AI</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="work-card">
-              <div class="work-image">
-                <div class="work-placeholder">
-                  <i class="fas fa-chart-bar"></i>
-                </div>
-                <div class="work-overlay">
-                  <span class="work-category">Dashboard</span>
-                </div>
-              </div>
-              <div class="work-content">
-                <h3 class="work-title">Analytics Dashboard</h3>
-                <p class="work-description">
-                  Real-time data visualization platform for enterprise clients.
-                </p>
-                <div class="work-tags">
-                  <span class="tag">Vue.js</span>
-                  <span class="tag">D3.js</span>
-                  <span class="tag">API</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="section section-contact">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">Get In Touch</span>
-            <h2 class="section-title">Let's Build Something Amazing</h2>
-            <p class="section-description">
-              Have a project in mind? We'd love to hear about it. Drop us a message
-              and we'll respond within 24 hours.
-            </p>
-          </div>
-
-          <div class="contact-wrapper">
-            <div class="contact-info">
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="info-content">
-                  <h4>Email</h4>
-                  <a href="mailto:denaachmad@narastudio.site">denaachmad@narastudio.site</a>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-clock"></i>
-                </div>
-                <div class="info-content">
-                  <h4>Response Time</h4>
-                  <p>Within 24 hours</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-globe"></i>
-                </div>
-                <div class="info-content">
-                  <h4>Location</h4>
-                  <p>Remote - Worldwide</p>
-                </div>
-              </div>
-
-              <div class="social-links">
-                <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://dribbble.com/yourhandle" target="_blank" rel="noopener" class="social-link" aria-label="Dribbble">
-                  <i class="fab fa-dribbble"></i>
-                </a>
-              </div>
-            </div>
-
-            <form class="contact-form" method="POST" action="https://formsubmit.co/mail@narastudio.site">
-              <!-- FormSubmit config -->
-              <input type="hidden" name="_subject" value="New Inquiry from Nara Studio Website" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" id="form-next" name="_next" value="" />
-              <!-- Honeypot to block bots -->
-              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required placeholder="Your name" />
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required placeholder="you@example.com" />
-              </div>
-
-              <div class="form-group form-group-full">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project..."></textarea>
-              </div>
-
-              <div class="form-status" aria-live="polite"></div>
-
-              <button type="submit" class="btn btn-primary btn-full">
-                <span>Send Message</span>
-                <i class="fas fa-paper-plane"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <div class="footer-logo">
-              <img src="images/narastudio.png" alt="Nara Studio" />
-              <span>Nara Studio</span>
-            </div>
-            <p class="footer-tagline">Transforming ideas into digital reality with AI-powered innovation.</p>
-          </div>
-
-          <div class="footer-links">
-            <div class="footer-column">
-              <h4>Navigation</h4>
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#services">Services</a>
-            </div>
-            <div class="footer-column">
-              <h4>Work</h4>
-              <a href="#work">Portfolio</a>
-              <a href="#contact">Contact</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p class="footer-copy">© <span id="year"></span> Nara Studio. All rights reserved.</p>
-          <div class="footer-badges">
-            <span class="footer-badge">
-              <i class="fas fa-bolt"></i>
-              Powered by AI
-            </span>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-      // Theme handling
-      const root = document.documentElement;
-      const themeToggle = document.querySelector('.theme-toggle');
-      const themeIcon = document.querySelector('.theme-icon');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-      function setTheme(t){
-        if(t === 'light'){
-          root.setAttribute('data-theme','light');
-          if(themeIcon) themeIcon.className = 'fas fa-sun theme-icon';
-        } else {
-          root.removeAttribute('data-theme');
-          if(themeIcon) themeIcon.className = 'fas fa-moon theme-icon';
-        }
-        localStorage.setItem('theme', t);
+      for (let i = 0; i < count * 3; i++) {
+        positions[i] = (Math.random() - 0.5) * 10;
       }
 
-      const saved = localStorage.getItem('theme');
-      if(saved){ setTheme(saved); }
-      else { if(!prefersDark.matches) setTheme('light'); }
+      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
-      if(themeToggle){
-        themeToggle.addEventListener('click',()=>{
-          const isLight = root.getAttribute('data-theme') === 'light';
-          setTheme(isLight ? 'dark' : 'light');
-        });
-      }
-
-      // Mobile nav toggle
-      const navToggle = document.querySelector('.nav-toggle');
-      const navItems = document.getElementById('nav-items');
-
-      if(navToggle && navItems){
-        navToggle.addEventListener('click', ()=>{
-          const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-          navToggle.setAttribute('aria-expanded', String(!expanded));
-          navItems.classList.toggle('open');
-          navToggle.classList.toggle('active');
-        });
-
-        navItems.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-          navItems.classList.remove('open');
-          navToggle.classList.remove('active');
-          navToggle.setAttribute('aria-expanded','false');
-        }));
-      }
-
-      // Active nav on scroll
-      const sections = Array.from(document.querySelectorAll('section[id]'));
-      const linkMap = new Map();
-
-      document.querySelectorAll('.nav-link').forEach(l=>{
-        const href = l.getAttribute('href');
-        if(href && href.startsWith('#')) linkMap.set(href.slice(1), l);
+      // Material - Changed to Blue to match theme
+      const material = new THREE.PointsMaterial({
+        size: 0.1,
+        color: 0x2563EB, // Royal Blue
+        transparent: true,
+        opacity: 0.8
       });
 
-      const io = new IntersectionObserver(entries=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){
-            const id = e.target.id;
-            document.querySelectorAll('.nav-link').forEach(n=>n.classList.remove('active'));
-            const link = linkMap.get(id);
-            if(link) link.classList.add('active');
-          }
-        });
-      }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+      const particles = new THREE.Points(geometry, material);
+      scene.add(particles);
 
-      sections.forEach(s=> io.observe(s));
+      camera.position.z = 5;
 
-      // Smooth scroll
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          const href = this.getAttribute('href');
-          if(href === '#') return;
+      // Animation Loop
+      const animate = () => {
+        requestAnimationFrame(animate);
 
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if(target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
+        particles.rotation.x += 0.001;
+        particles.rotation.y += 0.001;
+
+        // Gentle wave movement
+        const time = Date.now() * 0.0005;
+        scene.rotation.y = Math.sin(time) * 0.1;
+
+        renderer.render(scene, camera);
+      };
+
+      animate();
+
+      // Resize Handler
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
       });
+    };
 
-      // Footer year
-      const y = document.getElementById('year');
-      if(y){ y.textContent = new Date().getFullYear(); }
+    // Defer Three.js init
+    window.addEventListener('load', initThreeJS);
+  </script>
+</body>
 
-      // Contact form: set redirect URL and show status
-      (function(){
-        const next = document.getElementById('form-next');
-        if(next){ next.value = `${location.origin}${location.pathname}?sent=1#contact`; }
-
-        const statusEl = document.querySelector('.form-status');
-        const params = new URLSearchParams(location.search);
-
-        if(statusEl && params.has('sent')){
-          if(params.get('sent') === '1'){
-            statusEl.textContent = '✓ Thanks! Your message has been sent.';
-            statusEl.classList.add('success');
-          } else {
-            statusEl.textContent = '✗ Oops, sending failed. Please try again or email us.';
-            statusEl.classList.add('error');
-          }
-          try { history.replaceState({}, document.title, location.pathname + location.hash); } catch(e){}
-        }
-      })();
-
-      // Parallax effect on scroll
-      let ticking = false;
-      window.addEventListener('scroll', function() {
-        if (!ticking) {
-          window.requestAnimationFrame(function() {
-            const scrolled = window.pageYOffset;
-            const orbs = document.querySelectorAll('.orb');
-            orbs.forEach((orb, index) => {
-              const speed = (index + 1) * 0.1;
-              orb.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
-    </script>
-  </body>
 </html>

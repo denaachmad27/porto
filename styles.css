@@ -769,6 +769,7 @@ img {
 .footer-links {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -785,6 +786,253 @@ img {
   /* Merged into brand or simplified */
 }
 
+/* ========== HERO BADGES ========== */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.hero-badge-inline i {
+  color: var(--color-primary);
+  font-size: 0.7rem;
+}
+
+/* ========== FOUNDER SECTION ========== */
+.founder-section {
+  margin-top: 3rem;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-float);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.founder-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  border: 4px solid rgba(37, 99, 235, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.founder-info {
+  flex: 1;
+}
+
+.founder-tag {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.founder-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.founder-desc {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.founder-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.founder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.founder-badge i {
+  color: var(--color-primary);
+  font-size: 0.7rem;
+}
+
+/* ========== PRICING SECTION ========== */
+.section-pricing {
+  background: white;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.pricing-card.popular {
+  border-color: var(--color-primary);
+  background: rgba(37, 99, 235, 0.05);
+  box-shadow: var(--shadow-float);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: white;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.price-note {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+.pricing-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.pricing-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.pricing-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.pricing-list i {
+  color: var(--color-success);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.pricing-note {
+  margin-top: 2rem;
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+}
+
+.pricing-note i {
+  color: var(--color-success);
+  margin-right: 0.25rem;
+}
+
+/* ========== PORTFOLIO DISCLAIMER ========== */
+.portfolio-disclaimer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin-top: 0.75rem;
+}
+
+.portfolio-disclaimer i {
+  color: var(--color-primary);
+}
+
+/* ========== WHATSAPP BUTTON ========== */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-success);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.whatsapp-btn:hover {
+  background: var(--color-success);
+  color: white;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 960px) {
   .hero-grid {
@@ -794,6 +1042,10 @@ img {
   }
 
   .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-badges {
     justify-content: center;
   }
 
@@ -812,6 +1064,15 @@ img {
 
   .about-visual {
     order: -1;
+  }
+
+  .founder-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-badges {
+    justify-content: center;
   }
 
   .contact-box {
